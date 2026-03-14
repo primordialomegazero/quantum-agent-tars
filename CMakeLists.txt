@@ -4,8 +4,6 @@ project(QuantumAgentTARS)
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-include_directories(${CMAKE_CURRENT_SOURCE_DIR}/include)
-
 set(SOURCES
     src/main.cpp
     src/god/watermark.cpp
@@ -23,6 +21,8 @@ set(SOURCES
     src/drivers/IOSDriver.cpp
 )
 
+include_directories(${CMAKE_CURRENT_SOURCE_DIR}/include)
+
 add_executable(quantum_agent_tars ${SOURCES})
 
-target_link_libraries(quantum_agent_tars pthread)
+target_link_libraries(quantum_agent_tars pthread dl)

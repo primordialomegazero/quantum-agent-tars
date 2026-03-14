@@ -130,7 +130,7 @@ std::string AdaptiveServer::GenerateResponse(const std::string& request) {
     ss << "\r\n";
     ss << "{";
     ss << "\"status\":\"ok\",";
-    ss << "\"source\":\"" << god::Watermark::GetSignature() << "\",";
+    ss << "\"source\":\"" << god::SOURCE_SIGNATURE << "\",";
     ss << "\"memory_limit\":25,";
     ss << "\"threads\":" << workers_.size();
     ss << "}";
